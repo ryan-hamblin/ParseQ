@@ -1,10 +1,18 @@
 <DOCTYPE html>
 <html ng-app='parseQ'>
 <head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<title>ParseQ</title>
 </head>
 <body ng-controller="mainCtrl">
-	{{test}}
+	<h1>{{header}}</h1>
+	<form>
+		<div class="form-group">
+			<label for="askingAQuestion">Ask a Question</label>
+			<input type="text" ng-model="question" placeholder="Question">
+			<button ng-click="postData()" class="btn btn-default">Submit Question</button>
+		</div>
+	</form>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/defaultHeaders.js"></script>
